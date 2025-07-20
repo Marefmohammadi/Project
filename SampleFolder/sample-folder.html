@@ -21,9 +21,23 @@
     }
     show();
 
-    console.log(functionVar); // Throws ReferenceError
+    //console.log(functionVar); // Throws ReferenceError
     //console.log(functionLet); // Throws ReferenceError
     //console.log(functionConst); // Throws ReferenceError
+    function blockScope(){
+        var x= 2;
+        let y= 4;
+        const t= 8;
+        var sum = x + y +t;
+        console.log(sum);
+        x = 7;
+       // y = 6;
+        t = 4;
+        var sum = x + t;
+        console.log(sum);
+    }
+    blockScope();
+    blockScope();
   </script>
 </body>
 </html>
