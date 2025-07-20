@@ -7,17 +7,23 @@
   <h1>Sample Folder</h1>
   <button>SampleFolder</button>
   <button>SampleFolder</button>
+  <script src="javaScript.js"></script>
   <script>
-    /* variable--*/
-    const y = true;
-    function example() {
-        if(y = true){
-            var x = 10;
-        }
-        console.log(x);
-    }
+      /* variable--*/
+  
     var message = " hello world!"
     console.log(message);
+
+   function show(){
+    var functionVar = "I'm a block-scoped var";
+    let functionLet = "I'm a block-scoped let";
+    const functionConst = "I'm a block-scoped const";
+    }
+    show();
+
+    console.log(functionVar); // Throws ReferenceError
+    //console.log(functionLet); // Throws ReferenceError
+    //console.log(functionConst); // Throws ReferenceError
   </script>
 </body>
 </html>
