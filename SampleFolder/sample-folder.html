@@ -6,36 +6,10 @@
 <body>
   <h1>Sample Folder</h1>
   <button>SampleFolder</button>
-  <button>SampleFolder</button>
+  <p id="time message"></p>
   <script src="javaScript.js"></script>
   <script>
-      /* variable--*/
-  
-    var message = " hello world!"
-    console.log(message);
 
-   function show(){
-    var functionVar = "I'm a block-scoped var";
-    let functionLet = "I'm a block-scoped let";
-    const functionConst = "I'm a block-scoped const";
-    }
-    show();
-
-    //console.log(functionVar); // Throws ReferenceError
-    //console.log(functionLet); // Throws ReferenceError
-    //console.log(functionConst); // Throws ReferenceError
-    function blockScope(){
-        var x= 2;
-        let y= 4;
-        const t= 8;
-        var sum = x + y +t;
-        console.log(sum);
-        x = 8;
-        y = 2;
-        sum = x / y;
-        console.log(sum);
-      
-    }
     let age = 25;
     if(age >= 18){
         console.log("you are an adult");
@@ -43,6 +17,43 @@
     else{
         console.log("you are a minor.");
     }
+
+    // temprature
+    let time = 11;
+    if(time < 12){
+        document.getElementById("time message").innerText = "Good Morning";
+    }
+    else if(time < 18){
+        document.getElementById("time message").innerText = "Good Afternoon!";
+    } else{
+        document.getElementById("time message").innerText = "Good evening!";
+    }
+
+    let isRaining1 = false;
+    if(isRaining1){
+        console.log("Bring an umbrella.");
+    }else{
+        console.log("No need for an umbrella.");
+    }
+    /// nested of else statement
+    const temperature = 32;
+    const isRaining = true;
+
+    if(temperature > 30){
+        if(isRaining){
+            console.log("It is hot and raining. Stay inside");
+        }else{
+            console.log("It is hot, but not raining. Enjoy the sushine");
+        }
+    }else{
+        if(isRaining){
+            console.log("It's not so hot, but it's raining.Take an umbrella.");
+
+        }else{
+            console.log("It's not hot, and it's not raining. Have a nice day.");
+        }
+    }
+
   </script>
 </body>
 </html>
