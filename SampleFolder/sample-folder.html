@@ -6,9 +6,10 @@
 <body>
   <h1>Sample Folder</h1>
   <button>SampleFolder</button>
+  <input type="text" id="num">
   <p id="time message"></p>
-  <script src="javaScript.js"></script>
-  <script>
+  <script src="control_flow.js"></script>
+  <!-- <script>
 
     let age = 25;
     if(age >= 18){
@@ -35,7 +36,7 @@
     }else{
         console.log("No need for an umbrella.");
     }
-    /// nested of else statement
+    /// nested if else statement
     const temperature = 32;
     const isRaining = true;
 
@@ -53,7 +54,42 @@
             console.log("It's not hot, and it's not raining. Have a nice day.");
         }
     }
+    // switch statement
+    let day = "Sonday";
 
-  </script>
+    switch(day){
+        case "Monday":
+            console.log("It's the start of the workweek.");
+            break;
+        case "Friday":
+            console.log("It's almost the weekend.");
+            break;
+        default:
+            console.log("It's a regular day.");
+    }
+    // for loop statement
+    for(let i = 1; i <= 5; i++){
+        console.log(i);
+    }
+    // while loop
+    let limit = 50;
+    let a = 0;
+    let b = 1;
+
+    while (a <= limit) {
+    
+        let temp = a + b;
+        a = b;
+        b = temp;
+        console.log(a);
+    }
+    // do while loop
+    let roll = 1;
+
+    do {
+        console.log("Rolled a" + roll++);
+    } while(roll<7);
+
+  </script>-->
 </body>
 </html>
