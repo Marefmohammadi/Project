@@ -50,3 +50,6 @@ console.log("User Category:", userCategory);
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not Authenticated";
 console.log("Authentication Status:", authenticationStatus);
 
+// Practice task
+let 
+
