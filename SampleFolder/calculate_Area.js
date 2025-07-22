@@ -35,3 +35,21 @@ function outerFunction(){
 }
 const closure = outerFunction();
 closure();
+
+function greet(name){
+    const greeting = "Hello, ";
+    function sayHello(){
+        console.log(greeting + name);
+    }
+    return sayHello();
+}
+const greetJohn = greet("John");
+const greetAlice = greet("Alice");
+
+// function hoisting example
+
+sayBy();
+
+function sayBy(){
+    console.log("Good By my freind!");
+}
