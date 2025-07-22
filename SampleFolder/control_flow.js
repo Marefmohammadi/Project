@@ -51,5 +51,4 @@ let authenticationStatus = isAuthenticated ? "Authenticated" : "Not Authenticate
 console.log("Authentication Status:", authenticationStatus);
 
 // Practice task
-let 
 
