@@ -46,6 +46,8 @@
         <input type="text" id="textInput">
         <input type="submit" value="Submit">
       </form>
+      <!-- Focus event-->
+       <input type="text" id="inputText" placeholder="click here">
 
     <script src="followers_count.js"></script> 
     <script>
@@ -109,6 +111,18 @@
             event.preventDefault();
             console.log("Form submitted");
             alert("Form submitted!");
+        });
+
+        //Focus event
+
+        const inputText = document.getElementById("inputText");
+
+        inputText.addEventListener('focus', function(){
+            console.log("Input focused");
+        });
+
+        inputText.addEventListener('blur', function(){
+            console.log("Input blurred");
         });
 
     </script>
