@@ -12,10 +12,105 @@
     <hr>
 
     <h2>Click one button to follow</h2>
-    <button onclick="increaseCount()">Follow</button>
+    <button onclick="increaseCount()">Follow</button><br>
 
+    <button onclick="resetCount()">Reset</button><br><br>
 
+    <!-- click event -->
+
+    <button id="myButton">Click me</button>
+    <p id="output"></p>
+
+    <!-- Mouseover event -->
+     <div id="myDiv">Hover over me</div>
+     <p id="over"></p>
+
+    <!-- Keydown event -->
+    <input type="text" id="myInput">
+    <p id="keyEvent"></p>
+
+     <!-- Change event -->
+      <input type="text" id="change">
+      <p id="changeEvent"></p>
+
+      <!--addEventlistener-->
+      <button id="btn">Click</button>
+      <button id="clickBtn">Click Event</button>
+
+      <!--Mouseover-->
+      <div id="moveArea" style="width: 200px; height: 200px; background-color: lightcoral;"></div>
+      <p id="listener"></p>
+
+      <!--submit event-->
+      <form action="#" id="myForm">
+        <input type="text" id="textInput">
+        <input type="submit" value="Submit">
+      </form>
 
     <script src="followers_count.js"></script> 
+    <script>
+        /// Click event
+
+        const button = document.getElementById("myButton");
+        const output = document.getElementById("output");
+
+        button.onclick = function(){
+            output.textContent = "Butten clicked!";
+        };
+        /// Mouseover event
+
+        const div = document.getElementById("myDiv");
+        const over = document.getElementById("over");
+        div.onmouseover = function(){
+            over.textContent = "Mouse over the div !";
+        };
+
+    /// Keydown event 
+        const input = document.getElementById("myInput");
+        const keyEvent = document.getElementById("keyEvent");
+
+        input.onkeydown = function(event){
+            keyEvent.textContent = `key pressed: ${event.key}`;
+        };
+
+    /// Change event 
+        const change = document.getElementById("change");
+        const changeEvent = document.getElementById("changeEvent");
+
+        change.onchange= function(){
+            changeEvent.textContent = `Value changed to : ${change.value}`;
+        };
+
+        //addEventListener
+
+        const buttonEvent = document.getElementById("btn");
+        buttonEvent.addEventListener('click', handleButton());
+
+        function handleButton(){
+            console.log("Button Clicked!");
+        }
+
+        // click event
+        document.getElementById("clickBtn").addEventListener('click', function(){
+            alert("Button clicked!");
+        });
+
+        /// Mouseover
+        const moveArea = document.getElementById("moveArea");
+        const listener = document.getElementById("listener");
+
+        moveArea.addEventListener('mousemove', function(){
+            console.log(`Mouse coordination - x : ${event.clientX}, y: ${event.clientY}`);
+            listener.textContent = `Mouse coordination - x : ${event.clientX}, y: ${event.clientY}`;
+        });
+
+        // submit event
+        document.getElementById("myForm").addEventListener('submit', function(event){
+            event.preventDefault();
+            console.log("Form submitted");
+            alert("Form submitted!");
+        });
+
+    </script>
 </body>
 </html>
