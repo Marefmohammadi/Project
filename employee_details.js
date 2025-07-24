@@ -55,8 +55,45 @@ class Person {
     }
 
     getFullName(){
-        return `${this.firstName} ${this.lastName};`
+        return `${this.firstName} ${this.lastName}`;
     }
 }
 const person1 = new Person("John", "Doe");
-console.log(person1.getFullName);
+const person2 = new Person("Ali", "Ahmadi");
+console.log(person1.getFullName());
+console.log(person2.getFullName());
+// Object literals
+
+const person = {
+    firstName: "Alice",
+    lastName: "Johnson",
+    getName: function(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+};
+console.log(person.getName());
+
+// Function Constructor
+
+function Car (make, model){
+    this.make = make;
+    this.model = model;
+}
+const car1 = new Car("Toyota", "Camry");
+const car2 = new Car("Honda", "Civic");
+
+console.log("Car1 details are", car1);
+console.log("Car2 details are", car2);
+
+// object array
+
+const students = [
+    {name: "Alice",age: 25},
+    {name: "ali",age: 30},
+    {name: "Ahmad",age: 35},
+    {name: "Taqi",age: 40},
+
+];
+for (let i = 0; i < students.length; i ++){
+    console.log(students[i].name, students[i].age);
+}
