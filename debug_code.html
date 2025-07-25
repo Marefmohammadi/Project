@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging Example</title>
+</head>
+<body>
+
+    <h1>Debugging Example</h1>
+
+    <label for="input1">Entet Nubmer 1:</label>
+    <input type="number" id="input1"><br><br>
+
+    <label for="input2">Enter Number 2:</label>
+    <input type="number" id="input2"><br><br>
+
+    <label for="selectOperation">Select Operation:</label>
+    <select  id="selectOperation">
+        <option value="add">Add (+)</option>
+        <option value="subtract">Subtract (-)</option>
+        <option value="multiply">Multiply (*)</option>
+        <option value="divide">Divide (/)</option>
+    </select><br><br>
+
+
+    <button onclick="performOperation()">Perform Operation</button>
+
+    <p id="result"></p>
+
+    <p>lsfnfdkfsd fslfjsl fslfjsfklasdfj</p>
+    <ul id="my_list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <!--script Link-->
+    <script src="debug_code.js"></script>
+    <script>
+        const inputElement = document.getElementsByTagName("input");
+        console.log(inputElement);
+        console.log(inputElement[0]);
+        console.log(inputElement[1]);
+
+        const list = document.getElementById("my_list");
+        const newItem = document.createElement('li');
+        newItem.textContent = "Item 4";
+        list.appendChild(newItem);
+        console.log(list);
+    </script>
+</body>
+</html>
