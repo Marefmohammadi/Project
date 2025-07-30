@@ -40,3 +40,41 @@ addTaskBtn.addEventListener("click", addTask);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 
  displayTasks();
+/// BOM functions
+//acces HTML elements
+
+const alertBtn = document.getElementById("alerBtn");
+const windowBtn = document.getElementById("windowBtn");
+const backBtn = document.getElementById("backBtn");
+const changURLBtn = document.getElementById("changURLBtn");
+
+//Attach event listeners
+
+alertBtn.addEventListener('click',() => {
+    window.alert("Hello, this is an alert");
+});
+
+windowBtn.addEventListener('click', () => {
+    window.open('www.w3schools.com', 'blank');
+});
+
+backBtn.addEventListener('click', () => {
+    history.back();
+});
+
+changURLBtn.addEventListener('click', () =>{
+    location.href= "https://example.com";  
+});
+
+const parent = document.getElementById("parent");
+const firstChild = parent.firstChild;
+const lastChild = parent.lastChild;
+
+console.log(firstChild.textContent);
+console.log(lastChild);
+
+const button = document.getElementById("myBtn");
+button.style.backgroundColor = "blue";
+button.style.color ="white";
+button.style.fontSize = "16px";
+button.style.borderRadius = "3px";
